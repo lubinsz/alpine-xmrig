@@ -6,11 +6,14 @@ RUN   apk --no-cache upgrade && \
         cmake \
         libuv-dev \
         build-base && \
-      git clone https://github.com/xmrig/xmrig && \
-      cd xmrig && \
-      mkdir build && \
-      cmake -DCMAKE_BUILD_TYPE=Release . && \
-      make && \
+      git clone https://github.com/xmrig/xmrig
+
+ADD   set0.patch /xmrig
+
+RUN      cd /xmrig && \
+      patch -p1 <set0.patch && \
+      cmake -DWITH_HTTPD=OFF . && \
+      make -j && \
       apk del \
         build-base \
         cmake \

@@ -1,0 +1,26 @@
+From 2f04738dcc763d598a44222f63e7590de3d3b004 Mon Sep 17 00:00:00 2001
+From: bblu <bin.lu@arm.com>
+Date: Fri, 8 Jun 2018 07:25:07 +0000
+Subject: [PATCH] set donate as 0
+
+Signed-off-by: bblu <bin.lu@arm.com>
+---
+ src/config.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/config.json b/src/config.json
+index b2dad4c..9f0dff2 100644
+--- a/src/config.json
++++ b/src/config.json
+@@ -12,7 +12,7 @@
+     "colors": true,
+     "cpu-affinity": null,
+     "cpu-priority": null,
+-    "donate-level": 5,
++    "donate-level": 0,
+     "huge-pages": true,
+     "hw-aes": null,
+     "log-file": null,
+--
+2.15.2
+
